@@ -1,0 +1,56 @@
+feature,area,priority,original,clone,notes
+Three timer modes (Pomodoro / Short Break / Long Break),timer,must,yes,yes,Focus / Short / Long segmented control
+Start and pause countdown,timer,must,yes,yes,"Start, Pause, Resume, Reset; timestamp based so it cannot drift"
+Default 25/5/15 minute lengths,timer,must,yes,yes,all editable in Settings
+Progress bar showing elapsed time,timer,must,yes,yes,shown as a 60-tick dial plus a draining ring instead of a bar
+Background colour changes by mode,design,must,yes,partial,"accent colour and page glow change per mode; page stays paper/ink, own palette"
+Automatic switch to break after a pomodoro,timer,must,yes,yes,
+Long break after every N pomodoros,timer,must,yes,yes,"default 4, setting 2 to 12"
+Alarm sound when a session ends,sound,must,yes,yes,"3 synthesised sounds (Web Audio), no files"
+Add task with title,tasks,must,yes,yes,
+Estimated pomodoros per task,tasks,must,yes,yes,1 to 20
+Select active task and count completed pomodoros against it,tasks,must,yes,yes,
+Mark task done,tasks,must,yes,yes,
+Works without an account (state kept in the browser),storage,must,yes,yes,"localStorage, versioned and validated"
+Edit and delete task,tasks,should,yes,yes,delete has a 7 second Undo
+Task notes,tasks,should,yes,no,not built
+Customise timer lengths,settings,should,yes,yes,
+Long break interval setting,settings,should,yes,yes,
+Auto-start breaks and auto-start pomodoros toggles,settings,should,yes,yes,
+Alarm volume and repeat count,sound,should,yes,yes,
+Ticking background sound with volume,sound,should,yes,no,not built
+Totals: estimated pomodoros done/total and estimated finish time,tasks,should,yes,yes,finish time simulates breaks and long breaks
+Skip to next phase button,timer,should,yes,yes,skip does not count a session
+Remaining time shown in the browser tab title,timer,should,yes,yes,recalled; unverified
+Browser notification at session end,notifications,should,yes,yes,sent when the tab is in the background and permission is granted
+Task menu (clear finished / clear all),tasks,should,yes,partial,Clear done button; Erase everything lives in Settings
+Responsive mobile layout,design,should,yes,yes,"bottom tab bar on phones, two-column layout from 960px; no zoom lock"
+Reports: focus time per day / week / month,reports,should,yes,partial,7-day chart and 5-week calendar; no month view
+Sign in and keep history across devices,accounts,should,yes,skip,needs a backend; brief said no backend. JSON export/import covers moving data
+Task templates (3 free),templates,should,yes,no,not built
+Static pages: privacy / terms / contact,legal,should,yes,no,not built; data never leaves the browser
+Simple page route without marketing text,pages,could,yes,skip,the app has no marketing text to strip
+Dark mode when running,settings,could,yes,no,not built (full light/dark themes exist instead)
+12h/24h time format setting,settings,could,yes,no,follows the browser locale
+Projects (time per project),premium,could,yes,no,Premium in the original
+Yearly reports,premium,could,yes,no,Premium in the original
+CSV export of focus history,premium,could,yes,yes,free here; formula-safe
+Unlimited templates,premium,could,yes,no,Premium in the original
+Todoist task import,integrations,could,yes,skip,needs OAuth and a backend
+Webhook integration (Zapier / IFTTT),integrations,could,yes,skip,needs a backend
+Paid plan with card checkout and refund window,billing,could,yes,skip,no billing; app is free
+Ad-free for paid users,billing,could,yes,skip,no ads
+Desktop app (Mac / Windows / Linux),distribution,could,yes,skip,installable PWA not built
+Original logo / tomato icon / name / copy,branding,could,yes,skip,belongs to the owner; create your own
+Original alarm and ticking sound files,assets,could,yes,skip,ownership unknown; use licensed or self-made audio
+Existing user accounts and focus history,data,could,yes,skip,data the app owns
+Freestar ad revenue arrangement,business,could,yes,skip,partner deal
+Signed Mac and Windows installers,distribution,could,yes,skip,needs paid developer certificates
+"Light, dark and system themes",design,should,no,yes,"added in Slowburn, not part of parity score"
+Daily goal ring and streak,insights,should,no,yes,"added in Slowburn, not part of parity score"
+Five-week consistency calendar,insights,could,no,yes,"added in Slowburn, not part of parity score"
+"Focus history list grouped by day, with per-entry delete",insights,should,no,yes,"added in Slowburn, not part of parity score"
+Full JSON backup export and import,data,should,no,yes,"added in Slowburn, not part of parity score"
+Undo for deleted tasks,tasks,could,no,yes,"added in Slowburn, not part of parity score"
+"Keyboard shortcuts (Space, R)",timer,could,no,yes,"added in Slowburn, not part of parity score"
+Survives reload and sessions that ended while closed,storage,must,no,yes,"added in Slowburn, not part of parity score"

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-mode="focus">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Slowburn is a calm focus timer: Pomodoro sessions, a task queue, daily stats and history. Free, private, and everything stays in your browser." />
+    <meta name="theme-color" content="#F5EFE3" />
+    <title>Slowburn</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var s = JSON.parse(localStorage.getItem('slowburn:v1') || '{}');
+        var t = (s.settings && s.settings.theme) || 'system';
+        var d = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = d ? 'dark' : 'light';
+        if (s.timer && ['focus', 'short', 'long'].indexOf(s.timer.mode) > -1) document.documentElement.dataset.mode = s.timer.mode;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Slowburn needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Slowburn",
+  "avoid": ["Pomofocus", "FocusLab", "Yuya Uzu", "pomofocus"],
+  "domains": ["pomofocus.io"],
+  "colors": ["#ba4949", "#38858a", "#397097"]
+}

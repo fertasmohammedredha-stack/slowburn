@@ -1,0 +1,46 @@
+{
+  "_about": "Slowburn dark theme (ink). Same roles as tokens.json.",
+  "color": {
+    "bg": "#151210",
+    "surface": "#1F1B17",
+    "surface-sunk": "#0F0D0B",
+    "border": "#3A3228",
+    "border-input": "#857A66",
+    "text": "#F3ECDD",
+    "text-muted": "#B1A590",
+    "accent-focus": "#F0A24B",
+    "accent-short": "#8CCBA3",
+    "accent-long": "#BDB0F0",
+    "on-accent": "#1A1208",
+    "danger": "#FF8A80",
+    "success": "#7FD6A4"
+  },
+  "pairs": [
+    ["text", "bg"],
+    ["text", "surface"],
+    ["text", "surface-sunk"],
+    ["text-muted", "bg"],
+    ["text-muted", "surface"],
+    ["text-muted", "surface-sunk"],
+    ["on-accent", "accent-focus"],
+    ["on-accent", "accent-short"],
+    ["on-accent", "accent-long"],
+    ["accent-focus", "bg"],
+    ["accent-focus", "surface"],
+    ["accent-short", "bg"],
+    ["accent-short", "surface"],
+    ["accent-long", "bg"],
+    ["accent-long", "surface"],
+    ["danger", "surface"],
+    ["success", "surface"],
+    ["border-input", "bg", "ui"],
+    ["border-input", "surface", "ui"],
+    ["accent-focus", "surface", "ui"],
+    ["accent-short", "surface", "ui"],
+    ["accent-long", "surface", "ui"]
+  ],
+  "shadow": {
+    "card": "0 1px 0 rgba(255,255,255,.04) inset, 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7)",
+    "pop": "0 18px 48px -12px rgba(0,0,0,.8)"
+  }
+}
